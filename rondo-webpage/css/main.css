@@ -46,8 +46,11 @@
 
 .contact img {
     height: 22px;
+    margin: -5px;
 }
-
+.contact .phone-number {
+    margin-left: 11px;
+}
 .body .undertext {
     font-size: 35px;
     font-family: Zurich;
