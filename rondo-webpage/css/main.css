@@ -16,6 +16,20 @@
     url('../fonts/ZurichBT-UltraBlackExtended.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+    font-family: 'Futura Md BT';
+    src: url('../fonts/FuturaBT-Bold.eot');
+    src: url('../fonts/FuturaBT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaBT-Bold.woff2') format('woff2'),
+    url('../fonts/FuturaBT-Bold.woff') format('woff'),
+    url('../fonts/FuturaBT-Bold.ttf') format('truetype'),
+    url('../fonts/FuturaBT-Bold.svg#FuturaBT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 .center {
     text-align: center;
@@ -50,11 +64,15 @@
 }
 .contact .phone-number {
     margin-left: 11px;
+    font-size: 22px;
 }
 .body .undertext {
     font-size: 35px;
     font-family: Zurich;
     /*font-size: 1.3vw;*/
+    letter-spacing: -2px;
+    transform:scaleY(2);
+    margin-top: 52px;
 }
 
 .body .logo {
@@ -68,6 +86,9 @@
 
 .body .actions p {
     font-size: 35px;
+}
+.body .actions .actions-under {
+    font-weight: bolder;
 }
 
 .padding-bottom-30 {
@@ -83,8 +104,8 @@
 .body .exposed-text {
     font-size: 55px;
     font-weight: bolder;
-    font-family: FuturaBkBT;
-    text-shadow: 2px 2px black;
+    font-family: "Futura Md BT";
+    text-shadow: 4px -3px 8px #979797;
 }
 .body .exposed-text a {
     display: block;
@@ -93,7 +114,7 @@
 .body .exposed-text img {
     position: relative;
     height: 70px;
-    left: 11vw;
+    left: 11.5vw;
     top: -23px;
 }
 
@@ -139,6 +160,7 @@
 
 .footer {
     margin-top: 78px;
+    font-family: FuturaBkBT;
 }
 
 a {
