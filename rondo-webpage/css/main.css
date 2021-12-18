@@ -119,7 +119,7 @@
 }
 
 .body .main-info-square {
-    background: #d20018;
+    background: #D73438;
     max-width: 33vw;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgb(0 0 0), 0 6px 20px 0 rgb(0 0 0);
@@ -213,5 +213,55 @@ a {
     .footer {
         margin-top: 34px;
     }
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer; !* Add a pointer on hover *!*/
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.inner-content {
+    box-sizing: content-box;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px;
+    padding: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: white;
+    box-shadow: rgb(204 204 204) 0px 0px 8px 4px;
+    overflow: auto;
+    border-radius: 7px !important;
+    border-bottom-width: 35px !important;
+    border-bottom-color: #fff !important;
+}
+
+.close-popup {
+    color: grey;
+    margin: 10px 10px 0 0;
+}
+.close-popup:hover {
+    cursor: pointer;
+}
+
+.pull-right {
+    float: right;
 }
 
