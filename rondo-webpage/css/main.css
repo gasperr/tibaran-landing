@@ -265,3 +265,9 @@ a {
     float: right;
 }
 
+@media (min-width: 768px) {
+    .padding-bottom-30 {
+        padding-bottom: 80px;
+    }
+}
+
