@@ -120,50 +120,13 @@
 </section>
 
 
-
-<!-- Call to Action -->
-<section class="call-to-action text-white text-center">
-    <form method="POST" id="subscriber-form">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-xl-9 mx-auto">
-                    <h2 class="mb-4">Kontakt</h2>
-                </div>
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form>
-                        <div class="form-row">
-                            <div class="col-12 col-md-9 mb-2 mb-md-0 mx-auto">
-                                <input type="email" class="form-control form-control-lg" id="mail-input"
-                                       placeholder="Vaš email naslov" name="mail">
-                            </div>
-                            <div class="col-12 col-md-9 mb-2 mb-md-0 mx-auto" style="margin-top: 10px">
-                                <textarea class="form-control form-control-lg" id="text-input"
-                                          placeholder="Besedilo" name="text"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-3 mx-auto">
-                                <div class="btn" title="Pošlji" id="subscribe-click">
-                                    <i class="fa fa-send fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </form>
-</section>
-
 <!-- Footer -->
 <footer class="footer bg-light">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
                 
-                <p class="text-muted small mb-4 mb-lg-0">&copy; Tibaran 2021. All Rights Reserved.</p>
+                <p class="text-muted small mb-4 mb-lg-0">&copy; Tibaran 2024. All Rights Reserved.</p>
             </div>
             <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                 <ul class="list-inline mb-0">
@@ -193,38 +156,6 @@
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="vendor/jquery/jquery.form.js"></script>
 
-<script>
-    $("#subscribe-click").click(function (e) {
-        e.preventDefault();
-        var mail = $("#mail-input").val();
-        var body = $("#text-input").val();
-        if (mail) {
-            $("#mail-input").removeClass("error");
-            if (body) {
-                $("#text-input").removeClass("error");
-                $('#subscriber-form').ajaxForm({
-                    url: 'http://163.172.178.251:8080/middleware/inquiry',
-                    // url: 'http://localhost:8081/middleware/inquiry',
-                    headers: {"Authorization": "pLsD0ntSp4mM3"},
-                    success: function (succ) {
-                        $("#subscribe-click").html("<i class='fa fa-check' style='font-size: 25px; color: chartreuse'></i>");
-                        $("#mail-input").removeClass("error");
-                    },
-                    error: function (err) {
-                        console.log(err);
-                    },
-                    resetForm: true
-                }).submit();
-            } else {
-                $("#text-input").removeClass("error").addClass("error");
-            }
-
-        } else {
-            $("#mail-input").removeClass("error").addClass("error");
-        }
-
-    });
-</script>
 
 </body>
 
